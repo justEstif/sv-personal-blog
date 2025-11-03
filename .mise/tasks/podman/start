@@ -1,0 +1,29 @@
+#!/usr/bin/env fish
+#MISE description="Start development pod with all services (Postgres + MinIO)"
+
+# Create pod if it doesn't exist
+podman pod create --name $POD_NAME -p $POSTGRES_PORT:5432 -p $MINIO_PORT:9000 -p $MINIO_CONSOLE_PORT:9001 2>/dev/null; or true
+
+# Start Postgres container in the pod
+podman run -d \
+    --pod $POD_NAME \
+    --name $POSTGRES_CONTAINER_NAME \
+    -e POSTGRES_DB=$POSTGRES_DB \
+    -e POSTGRES_USER=$POSTGRES_USER \
+    -e POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
+    -v $POSTGRES_VOLUME_NAME:/var/lib/postgresql/data \
+    docker.io/library/postgres:16 2>/dev/null; or podman start $POSTGRES_CONTAINER_NAME
+
+# Start MinIO container in the pod
+podman run -d \
+    --pod $POD_NAME \
+    --name $MINIO_CONTAINER_NAME \
+    -e MINIO_ROOT_USER=$MINIO_ROOT_USER \
+    -e MINIO_ROOT_PASSWORD=$MINIO_ROOT_PASSWORD \
+    -v $MINIO_VOLUME_NAME:/data \
+    quay.io/minio/minio:latest server /data --console-address ":9001" 2>/dev/null; or podman start $MINIO_CONTAINER_NAME
+
+echo "✓ Pod '$POD_NAME' started with:"
+echo "  - Postgres: localhost:$POSTGRES_PORT"
+echo "  - MinIO API: localhost:$MINIO_PORT"
+echo "  - MinIO Console: localhost:$MINIO_CONSOLE_PORT"

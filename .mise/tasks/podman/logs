@@ -1,0 +1,4 @@
+#!/usr/bin/env fish
+#MISE description="Show pod logs"
+
+podman pod logs -f $POD_NAME

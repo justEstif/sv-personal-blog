@@ -1,0 +1,22 @@
+[tools]
+node = "lts"
+
+[env]
+# Podman pod configuration
+POD_NAME = "dev-pod"
+
+# Postgres configuration
+POSTGRES_PORT = "5432"
+POSTGRES_DB = "dev"
+POSTGRES_USER = "postgres"
+POSTGRES_PASSWORD = "postgres"
+POSTGRES_CONTAINER_NAME = "postgres"
+POSTGRES_VOLUME_NAME = "postgres_data"
+
+# MinIO configuration
+MINIO_PORT = "9000"
+MINIO_CONSOLE_PORT = "9001"
+MINIO_ROOT_USER = "minioadmin"
+MINIO_ROOT_PASSWORD = "minioadmin"
+MINIO_CONTAINER_NAME = "minio"
+MINIO_VOLUME_NAME = "minio_data"

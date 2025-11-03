@@ -11,3 +11,4 @@ This is a **SvelteKit-based personal blog** project using modern web technologie
 - **Language**: TypeScript (strict mode)
 - **Build Tool**: Vite
 - **Package Manager**: pnpm
+- **Environment/Dev Tools**: mise

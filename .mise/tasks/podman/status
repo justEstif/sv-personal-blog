@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+#MISE description="Show pod and container status"
+
+echo "=== Pod Status ==="
+podman pod ps | grep $POD_NAME
+
+echo ""
+echo "=== Container Status ==="
+podman ps -a --filter "pod=$POD_NAME"
