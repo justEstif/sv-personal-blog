@@ -12,6 +12,7 @@ POSTGRES_USER = "postgres"
 POSTGRES_PASSWORD = "postgres"
 POSTGRES_CONTAINER_NAME = "postgres"
 POSTGRES_VOLUME_NAME = "postgres_data"
+DATABASE_URL = "postgresql://postgres:postgres@localhost:5432/dev"
 
 # MinIO configuration
 MINIO_PORT = "9000"
