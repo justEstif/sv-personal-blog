@@ -8,7 +8,6 @@
         <li><a href="/blogs">Blogs</a></li>
         <li><a href="/search">Search</a></li>
         <li><a href="/auth/sign-in">Sign In</a></li>
-        <li><a href="/admin">Admin</a></li>
       </ul>
     </div>
   </header>
@@ -32,8 +31,7 @@
     <nav class="grid grid-flow-col gap-2">
       <a href="/" class="link link-hover">About us</a>
       <a href="/" class="link link-hover">Contact</a>
-      <a href="/" class="link link-hover">Jobs</a>
-      <a href="/" class="link link-hover">Press kit</a>
+      <a href="/admin" class="link link-hover">Admin</a>
     </nav>
     <aside>
       <p>

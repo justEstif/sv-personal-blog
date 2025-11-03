@@ -20,3 +20,10 @@ MINIO_ROOT_USER = "minioadmin"
 MINIO_ROOT_PASSWORD = "minioadmin"
 MINIO_CONTAINER_NAME = "minio"
 MINIO_VOLUME_NAME = "minio_data"
+MINIO_ENDPOINT = "localhost"
+MINIO_USE_SSL = "false"
+MINIO_PUBLIC_URL = "http://localhost:9000"
+
+# MinIO Bucket Names
+MINIO_POSTS_BUCKET = "blog-posts"
+MINIO_ASSETS_BUCKET = "blog-assets"
