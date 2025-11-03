@@ -5,21 +5,24 @@
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal gap-4 px-1">
-        <li>Auth</li>
-        <li>Admin</li>
+        <li><a href="/blogs">Blogs</a></li>
+        <li><a href="/search">Search</a></li>
+        <li><a href="/auth/sign-in">Sign In</a></li>
+        <li><a href="/admin">Admin</a></li>
       </ul>
     </div>
   </header>
   <main class="flex-1 hero bg-base-300">
     <div class="hero-content text-center">
       <div class="max-w-md">
-        <h1 class="text-5xl font-bold">Hello there</h1>
+        <h1 class="text-5xl font-bold">Welcome to Our Blog Platform</h1>
         <p class="py-6">
-          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-          excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
-          id nisi.
+          Discover amazing stories and insights from writers around the world.
+          Read, share, and connect with a community of passionate content
+          creators. Whether you're here to explore or to share your own voice,
+          you're in the right place.
         </p>
-        <button class="btn btn-primary">Get Started</button>
+        <a href="/auth/sign-up" class="btn btn-primary">Get Started</a>
       </div>
     </div>
   </main>
