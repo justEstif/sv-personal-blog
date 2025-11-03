@@ -28,3 +28,7 @@ MINIO_PUBLIC_URL = "http://localhost:9000"
 # MinIO Bucket Names
 MINIO_POSTS_BUCKET = "blog-posts"
 MINIO_ASSETS_BUCKET = "blog-assets"
+
+# Better-Auth
+BETTER_AUTH_SECRET = "6iILVts2hBayeR0HA6hK8Q8VNy2OrtYH"
+BETTER_AUTH_URL = "http://localhost:5173"
