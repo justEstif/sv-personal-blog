@@ -1,3 +1,8 @@
+<script lang="ts">
+  import { useSession, signOut } from "$lib/auth-client";
+  const session = useSession();
+</script>
+
 <div class="min-h-screen flex flex-col">
   <header class="navbar bg-base-100 shadow-sm container mx-auto">
     <div class="flex-1">
@@ -7,7 +12,20 @@
       <ul class="menu menu-horizontal gap-4 px-1">
         <li><a href="/blogs">Blogs</a></li>
         <li><a href="/search">Search</a></li>
-        <li><a href="/auth/sign-in">Sign In</a></li>
+
+        <li>
+          {#if $session.data}
+            <button
+              on:click={async () => {
+                await signOut();
+              }}
+            >
+              Sign Out
+            </button>
+          {:else}
+            <a href="/auth/sign-in">Sign In</a>
+          {/if}
+        </li>
       </ul>
     </div>
   </header>
