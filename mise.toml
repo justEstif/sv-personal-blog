@@ -32,3 +32,8 @@ MINIO_ASSETS_BUCKET = "blog-assets"
 # Better-Auth
 BETTER_AUTH_SECRET = "6iILVts2hBayeR0HA6hK8Q8VNy2OrtYH"
 BETTER_AUTH_URL = "http://localhost:5173"
+
+# Database management tasks
+[tasks."db:reset"]
+description = "Delete all drizzle migration files"
+run = 'rm -rf drizzle/'

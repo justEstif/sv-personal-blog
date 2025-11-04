@@ -4,8 +4,8 @@
 | -------------------------------------------- | ------------------- | -------------------- | ---------------------------------------------------------------------------------- |
 | `/`                                          | **Platform Home**   | Content discovery    | Featured/trending posts, popular categories/tags, active authors, search & filters |
 | `/blogs`                                     | **Blog Directory**  | Browse all blogs     | Blog cards, filter by category, sort by newest/active/followers                    |
-| `/blogs/[author]`                            | **Individual Blog** | Author's content hub | Post feed, blog description, author bio, subscribe button                          |
-| `/blogs/[author]/[slug]`                     | **Blog Post**       | Read content         | Full post, author bio, related posts, threaded comments with moderation            |
+| `/blogs/[authorId]`                          | **Individual Blog** | Author's content hub | Post feed, blog description, author bio, subscribe button                          |
+| `/blogs/[authorId]/[postId]`                 | **Blog Post**       | Read content         | Full post, author bio, related posts, threaded comments with moderation            |
 | `/author/[username]`                         | **Author Profile**  | Author information   | Bio, avatar, posts, statistics, blog management links                              |
 | `/search`, `/tag/[slug]`, `/category/[slug]` | **Search & Tags**   | Content filtering    | Full-text search, category browsing, tag/category pages                            |
 
@@ -32,7 +32,7 @@
 | ---------------------------------------------------- | ------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------- |
 | `/dashboard`                                         | **Dashboard Home**        | Quick overview    | Post/view/comment stats, activity feed, quick actions                                                    |
 | `/dashboard/posts`                                   | **Post Management**       | Manage all posts  | Table with status, dates, views, comments; filters, bulk actions                                         |
-| `/dashboard/posts/new`, `/dashboard/posts/[id]/edit` | **Create/Edit Post**      | Write content     | Rich text editor, metadata (title, slug, excerpt, featured image), tags, SEO options, publication status |
+| `/dashboard/posts/new`, `/dashboard/posts/[id]/edit` | **Create/Edit Post**      | Write content     | Rich text editor, metadata (title, excerpt, featured image), tags, SEO options, publication status |
 | `/dashboard/comments`                                | **Comments & Moderation** | Manage discussion | Pending/approved/rejected comments, approve/reject/reply/spam flags                                      |
 | `/dashboard/settings`                                | **Blog Settings**         | Configure blog    | Name, description, categories, tags, visibility, comment moderation policy                               |
 | `/dashboard/analytics`                               | **Analytics**             | View performance  | Post views/comments, followers, growth, popular content                                                  |

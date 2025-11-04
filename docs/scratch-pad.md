@@ -1,5 +1,16 @@
 Blog Core Components:
 
+
+Now to setup the database for the blog data
+
+authors -> have blogs -> have posts
+
+posts -> have assests like images stored on miniio
+- all the text content is stored on the database
+- svx
+
+---
+
 1. Data Structure
 
 - Define what a "post" is: title, slug, content, date, tags/categories, author, excerpt
