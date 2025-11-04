@@ -4,7 +4,6 @@ import { faker } from '@faker-js/faker';
 export const users = [
   // Admin User
   {
-    id: 'admin-user-id',
     name: 'Admin User',
     email: 'admin@example.com',
     role: 'admin',
@@ -13,7 +12,6 @@ export const users = [
   },
   // Author Users
   ...Array.from({ length: 5 }, (_, i) => ({
-    id: `author-user-id-${i + 1}`,
     name: faker.person.fullName(),
     email: faker.internet.email(),
     role: 'author',
@@ -22,7 +20,6 @@ export const users = [
   })),
   // Standard Users
   ...Array.from({ length: 4 }, (_, i) => ({
-    id: `standard-user-id-${i + 1}`,
     name: faker.person.fullName(),
     email: faker.internet.email(),
     role: 'user',
