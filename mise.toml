@@ -37,3 +37,7 @@ BETTER_AUTH_URL = "http://localhost:5173"
 [tasks."db:reset"]
 description = "Delete all drizzle migration files"
 run = 'rm -rf drizzle/'
+
+[tasks."db:seed"]
+description = "Seed the database with dummy data"
+run = 'vite-node src/lib/server/db/seed.ts'
