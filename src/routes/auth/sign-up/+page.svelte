@@ -31,7 +31,7 @@
         email,
         password,
         name,
-        // TODO: add username here
+        username,
       });
 
       if (result.error) {
@@ -91,7 +91,7 @@
           <span class="label-text">User Name</span>
         </label>
         <input
-          id="name"
+          id="username"
           type="text"
           placeholder="Enter your Username name"
           class="input input-bordered"
